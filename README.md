@@ -1,6 +1,6 @@
 # phpipamapi
 
-A couple php scripts to automate interaction with the phpIPAM IP tracking software.
+A few php scripts to automate interaction with the phpIPAM IP tracking software.
 phpIPAM can be found at http://phpipam.net.
 
 ## Configuration
@@ -13,7 +13,7 @@ phpIPAM installation.
 0. Record the api name and token for later use with the scripts included here.
 
 ## Reserving or requesting an IP
-Using curl, or some other suitable tool, send a request of the folling format to getFreeIP.php.
+Using curl, or some other suitable tool, send a request of the following format to getFreeIP.php.
 
 ```
 https://[url of your install]/api/getFreeIP.php?apiapp=[api name]&apitoken=[api token]&subnet=[subnet in dotted quad]&host[host name]&user=[user name]&desc=[description]
