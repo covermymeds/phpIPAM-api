@@ -7,7 +7,7 @@ function ValidateToken($api_app = NULL, $api_token = NULL)
 {
 
   # Need to pull in DB connection.
-  include('/pub/ipam/current/pub/config.php');
+  include('../config.php');
 
   $valid_api_app = filter_var($api_app, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z0-9_]*$/")));
   if(!$valid_api_app) {
