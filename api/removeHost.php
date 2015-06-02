@@ -9,7 +9,7 @@
 
 # config
 include_once('../config.php');
-include('/pub/ipam/current/pub/api/tokenValid.php');
+include('tokenValid.php');
 
 # Get the DNS name to remove from IPAM
 $name = $_REQUEST['host'];
@@ -17,7 +17,7 @@ $api_app = $_REQUEST['apiapp'];
 $api_token = $_REQUEST['apitoken'];
 
 # Check for bad characters in $name
-if (!isset($name)) {
+if (strlen($name) < 1) {
   print "ERROR!! no host specified\n";
   exit();
 }
