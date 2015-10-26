@@ -89,7 +89,7 @@ INSERT INTO `ipaddresses` (`subnetId`,`description`,`ip_addr`,`dns_name`,`mac`,`
 EOQ;
 
 try {
-  $id = $database->executeQuery( $query, true );
+  $id = $database->query( $query, true );
   print $firstfree;
 }
 catch (Exception $e) {
