@@ -32,16 +32,16 @@ This will remove from phpIPAM the host name passed to it.
 ## Dumping domain or subnet information
 
 ```
-https://[url of your install]/api/removeHost.php?apiapp=[api name]&apitoken=[api token]&domain=[domain or subnet]
+https://[url of your install]/api/getIPs.php?apiapp=[api name]&apitoken=[api token]&domain=[domain or subnet]
 ```
 
 You can pass either a domain name, such as example.com, or a subnet defined in phpIPAM.  When passing a domain the script will return a JSON array of fully qualified host names and IP addresses.  
 
 ```
-curl https://phpipam.dev/api/removeHost.php?apiapp=myapi&apitoken=blahblahla456789&domain=example.com"
+curl https://phpipam.dev/api/getIPs.php?apiapp=myapi&apitoken=blahblahla456789&domain=example.com"
 {"pete.example.com":"10.1.60.100","bob.example.com":"10.1.40.106",......}
 ```
 ```
-curl https://phpipam.dev/api/removeHost.php?apiapp=myapi&apitoken=blahblahla456789&domain=10.1.16.0"
+curl https://phpipam.dev/api/getIPs.php?apiapp=myapi&apitoken=blahblahla456789&domain=10.1.16.0"
 {"showy.example.com":"10.1.16.32","silly.example.com":"10.1.16.31",....}
 ```
